@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ru-RU">
+<head>
+	<meta charset="utf-8">
+	<link rel="icon" href= "favicon.ico">
+
+	<title>Язык программирования D</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta name="description" content="Язык программирования D — сайт русскоязычного сообщества">
+
+	<link href="https://fonts.googleapis.com/css?family=PT+Mono|PT+Sans+Narrow:400,700|PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+
+	<link rel="stylesheet" href="ui/clear.css">
+	<link rel="stylesheet" href="ui/css.css">
+
+	<script type="text/javascript" src="js/smoothscroll.js"></script>
+	<script type="text/javascript" src="js/js.js"></script>
+</head>
+<body class="PageBody">
+
+	<div class="PageNavigation"><div class="content">
+		<div class="logo"><img src="ui/dlogo.svg"></div>
+		<nav class="NavMenu" id="nav">
+			<a href="#nav" class="toggle" id="menu-toggle">&#9776;</a>
+			<ul class="list">
+				<li><a href="#download" class="-smooth">Компиляторы</a></li>
+				<li><a href="#links" class="-smooth">Ссылки</a></li>
+				<li><a href="#community" class="-smooth">Сообщество</a></li>
+				<li><a href="#ide" class="-smooth">IDE</a></li>
+				<li><a href="#usage" class="-smooth">Применение</a></li>
+			</ul>
+		</nav>
+	</div></div>
+
+	<section class="PageTitle"><div class="content">
+		<div class="about">
+			<p class="text"><b>D</b> — это мультипарадигмальный компилируемый язык программирования общего назначения со статической типизацией и Си-подобным синтаксисом.</p>
+			<div class="links">
+					<a href="#download" class="PushButton -xl -accent -smooth">Скачать</a>
+					<a href="#links" class="PushButton -xl -smooth">Подробности</a>
+			</div>
+		</div>
+
+		<div class="sample">
+			<pre class="SourceCode" id="sourcecode"></pre>
+			<div class="links">
+				<a href="#" class="PushButton -xs" title="Открыть код на run.dlang.io" id="ide-btn">run.dlang.io</a>
+				<a href="https://rosettacode.org/wiki/Category:D" target="_blank" class="PushButton -xs" title="Примеры кода на Rosetta Code">Примеры</a>
+			</div>
+		</div>
+	</div></section>
+
+	<section class="PageSection"><div class="content" id="download">
+		<h2 class="title">Скачать</h2>
+
+		<div class="ImagedList">
+			<div class="item -dmd">
+				<div class="logo"><img src="ui/dmd.png"></div>
+				<div class="description">
+					<div class="_text">
+						<h3 class="title">DMD</h3>
+						<ul>
+							<li>Официальный референсный компилятор, разрабатываемый Уолтером Брайтом.</li>
+							<li>Наиболее полно реализует стандарт языка.</li>
+							<li>Простая установка.</li>
+							<li>Высокая скорость компиляции.</li>
+						</ul>
+						<p><b>Платформы:</b> Windows, Linux, OS X, FreeBSD.</p>
+					</div>
+					<div class="links">
+						<a href="https://dlang.org/download.html#dmd" target="_blank" class="PushButton">Скачать</a>
+						<a href="https://wiki.dlang.org/DMD" target="_blank" class="PushButton">Wiki</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="item -ldc -even">
+				<div class="logo"><img src="ui/ldc2.png"></div>
+				<div class="description">
+					<div class="_text">
+						<h3 class="title">LDC</h3>
+						<ul>
+							<li>Фронтэнд для <a href="https://llvm.org/">LLVM</a>.</li>
+							<li>Генерирует хорошо оптимизированный код.</li>
+							<li>Поддерживает множество платформ и архитектур.</li>
+						</ul>
+						<p><b>Платформы:</b> Windows, Linux, OS X, FreeBSD, OpenSolaris, iOS (alpha), Android.</p>
+					</div>
+					<div class="links">
+						<a href="https://github.com/ldc-developers/ldc#installation" target="_blank" class="PushButton">Скачать</a>
+						<a href="https://wiki.dlang.org/LDC" target="_blank" class="PushButton">Wiki</a>
+					</div>
+				</div>
+			</div>
+	
+			<div class="item -gdc">
+				<div class="logo"><img src="ui/gdc.png"></div>
+				<div class="description">
+					<div class="_text">
+						<h3 class="title">GDC</h3>
+						<ul>
+							<li>Фронтэнд для компилятора GCC.</li>
+							<li>Генерирует хорошо оптимизированный код.</li>
+							<li>Отличная поддержка <a href="https://www.gnu.org/software/gdb/">GDB</a>.</li>
+						</ul>
+						<p><b>Платформы:</b> Linux, Windows (alpha), OS X (untested), FreeBSD (untested).</p>
+					</div>
+					<div class="links">
+						<a href="https://gdcproject.org/downloads" target="_blank" class="PushButton">Скачать</a>
+						<a href="https://wiki.dlang.org/GDC" target="_blank" class="PushButton">Wiki</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div></section>
+
+	<section class="PageSection -dark"><div class="content" id="links">
+		<h2 class="title">Ссылки</h2>
+		<div class="LinkList _text">
+			<ul class="ru -nobullet">
+				<li><span class="badge">RU</span> <a href="https://github.com/deviator/duseful">duseful</a> — сборник простых рецептов и примеров кода на языке D.</li>
+				<li><span class="badge">RU</span> <a href="http://striver00.ru/D/">Сайт</a> тов. Striver'а.
+					<ul class="-nobullet">
+						<li><span class="badge">RU</span> <a href="http://striver00.ru/D/files/Шаблоны_D_ru.pdf">Шаблоны D</a>: учебное пособие. Русский перевод.</li>
+						<li><span class="badge">RU</span> <a href="http://striver00.ru/D/files/D-tutorialspoint_ru.pdf">Учебник</a> по языку программирования D. Русский перевод.</li>
+					</ul>
+				</li>
+				<li><span class="badge">RU</span> <a href="https://tour.dlang.org/tour/ru/welcome/welcome-to-d">DLang Tour</a> — онлайн-тур по языку программирования D.</li>
+			</ul>
+			<ul class="en -nobullet">
+				<li><span class="badge -alert">EN</span> <a href="https://dlang.org">Официальный сайт</a> языка программирования D.</li>
+				<li><span class="badge -alert">EN</span> <a href="https://run.dlang.io">Онлайн компилятор</a>.</li>
+				<li><span class="badge -alert">EN</span> <a href="https://rosettacode.org/wiki/Category:D">Примеры кода</a> на Rosetta Code.</li>
+				<li><span class="badge -alert">EN</span> <a href="https://github.com/zhaopuming/awesome-d">Awesome D</a> — большой список полезных ссылок.</li>
+			</ul>
+		</div>
+	</div></section>
+
+	<section class="PageSection"><div class="content" id="community">
+		<h2 class="title">Сообщество</h2>
+		<div class="CommunityList">
+
+			<div class="group _text">
+				<ul class="-nobullet">
+					<li><span class="badge">RU</span> <a href="https://t.me/dlangru" target="_blank">dlangru</a> в Telegram.</li>
+					<li><span class="badge -alert">EN</span> Официальный IRC-канал <a href="irc://irc.freenode.net/d" target="_blank">#d @ Freenode</a>.</li>
+				</ul>
+			</div>
+
+			<div class="group _text">
+				<ul class="-nobullet">
+					<li><span class="badge -alert">EN</span> <a href="https://forum.dlang.org/">Форум</a> на официальном сайте.</li>
+					<li><span class="badge -alert">EN</span> <a href="https://wiki.dlang.org/">Wiki</a> на официальном сайте.</li>
+					<li><span class="badge -alert">EN</span> <a href="https://twitter.com/search?q=%23dlang">Twitter</a>.</li>
+				</ul>
+			</div>
+
+			<div class="group _text">
+				<ul class="-nobullet">
+					<li><span class="badge -alert">EN</span> <a href="https://github.com/dlang">GitHub</a>.</li>
+					<li><span class="badge -alert">EN</span> <a href="https://dlang.org/bugstats.html">The D Bug Tracker</a>.</li>
+				</ul>
+			</div>
+	
+		</div>
+	</div></section>
+
+	<section class="PageSection -dark"><div class="content" id="ide">
+		<h2 class="title">Редакторы и среды разработки</h2>
+		<div class="ImagedList">
+
+			<div class="item -vscode">
+				<div class="logo"><img src="ui/ide/vscode.png"></div>
+				<div class="description">
+					<div class="_text">
+						<h3 class="title">Visual Studio Code</h3>
+						<p>Редактор исходного кода, разработанный Microsoft для Windows, Linux и macOS.</p>
+						<ul>
+							<li>Подсветка синтаксиса.</li>
+							<li>Автодополнение кода.</li>
+							<li>Навигация по коду.</li>
+							<li>Форматирование.</li>
+							<li>Сборка.</li>
+						</ul>
+					</div>
+					<div class="links">
+						<a href="https://code.visualstudio.com/" target="_blank" class="PushButton -accent">Перейти на сайт</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="item -visuald -even">
+				<div class="logo"><img src="ui/ide/visual-d.png"></div>
+				<div class="description">
+					<div class="_text">
+						<h3 class="title">Visual-D</h3>
+						<p>Плагин для Visual Studio, добавляющий поддрежку языка D, и предоставляющий возможность управления проектом.</p>
+						<ul>
+							<li>Подсветка синтаксиса.</li>
+							<li>Подсветка синтаксических ошибок.</li>
+							<li>Автодополнение кода.</li>
+							<li>Навигация по коду.</li>
+							<li>Форматирование.</li>
+							<li>Сборка.</li>
+							<li><b>Плагин написан на D.</b></li>
+						</ul>
+					</div>
+					<div class="links">
+							<a href="http://rainers.github.io/visuald/visuald/StartPage.html" target="_blank" class="PushButton -accent">Перейти на сайт</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="item -idea">
+				<div class="logo"><img src="ui/ide/idea.png"></div>
+				<div class="description">
+					<div class="_text">
+						<h3 class="title">Плагин Intellij</h3>
+						<p>Плагин для популярной интегрированной среды разработки IntelliJ IDEA компании JetBrains.</p>
+						<ul>
+							<li>Поддержка проектов DUB.</li>
+							<li>Подсветка синтаксиса.</li>
+							<li>Автодополнение кода.</li>
+							<li>Навигация по коду.</li>
+							<li>Форматирование.</li>
+							<li>Рефакторинг.</li>
+						</ul>
+					</div>
+					<div class="links">
+						<a href="https://github.com/intellij-dlanguage/intellij-dlanguage" target="_blank" class="PushButton -accent">Перейти на сайт</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="item -dlang -even">
+				<div class="logo"><img src="ui/ide/dlang.png"></div>
+				<div class="description">
+					<div class="_text">
+						<h3 class="title">Dlang IDE</h3>
+						<p>Интегрированная среда разработки, написанная на D с использованием Dlang UI.</p>
+						<ul>
+							<li>Использование файлов DUB (json и sdl) в качестве файлов проекта.</li>
+							<li>Подсветка синтаксиса.</li>
+							<li>Автодополнение кода.</li>
+							<li>Навигация по коду.</li>
+							<li>Форматирование.</li>
+							<li>Сборка и запуск проектов.</li>
+						</ul>
+					</div>
+					<div class="links">
+						<a href="https://github.com/buggins/dlangide" target="_blank" class="PushButton -accent">Перейти на сайт</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="item -sublime">
+				<div class="logo"><img src="ui/ide/sublime.png"></div>
+				<div class="description">
+					<div class="_text">
+						<h3 class="title">Sublime Text</h3>
+						<p>Кроссплатформенный проприетарный текстовый редактор. Поддерживает плагины на языке программирования Python.</p>
+						<ul>
+							<li>Подсветка синтаксиса.</li>
+							<li>Автодополнение кода.</li>
+							<li>Навигация по коду.</li>
+							<li>Форматирование.</li>
+						</ul>
+					</div>
+					<div class="links">
+						<a href="https://www.sublimetext.com/" target="_blank" class="PushButton -accent">Перейти на сайт</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="item -atom -even">
+				<div class="logo"><img src="ui/ide/atom.png"></div>
+				<div class="description">
+					<div class="_text">
+						<h3 class="title">Atom</h3>
+						<p>Бесплатный текстовый редактор с открытым исходным кодом для Linux, macOS, Windows с поддержкой плагинов, написанных на Node.js, и встраиваемых под управлением Git.</p>
+						<ul>
+							<li>Подсветка синтаксиса.</li>
+							<li>Автодополнение кода.</li>
+							<li>Навигация по коду.</li>
+						</ul>
+					</div>
+					<div class="links">
+						<a href="https://atom.io/" target="_blank" class="PushButton -accent">Перейти на сайт</a>
+					</div>
+				</div>
+			</div>
+
+<!-- You're one ugly motherfucker
+			<div class="item -codeblocks">
+				<div class="logo"><img src="ui/ide/code-blocks.png"></div>
+				<div class="description">
+					<div class="_text">
+						<h3 class="title">Code::Blocks</h3>
+						<p>Cвободная кроссплатформенная среда разработки.</p>
+						<ul>
+							<li>Создание проектов.</li>
+							<li>Подсветка синтаксиса.</li>
+							<li>Отладка кода.</li>
+						</ul>
+					</div>
+					<div class="links">
+						<a href="http://www.codeblocks.org/" target="_blank" class="PushButton -accent">Перейти на сайт</a>
+					</div>
+				</div>
+			</div>
+-->
+
+		</div>
+	</div></section>
+
+	<section class="PageSection"><div class="content" id="usage">
+		<h2 class="title">Кто использует D?</h2>
+		<div class="CompanyList">
+			<a href="https://medium.com/@NetflixTechBlog/introducing-vectorflow-fe10d7f126b8" class="item -netflix"><img src="ui/netflix.png"></a>
+			<a href="https://dlang.org/blog/2017/05/24/faster-command-line-tools-in-d/" class="item -ebay"><img src="ui/ebay.png"></a>
+			<a href="https://dconf.org/2017/talks/watson.html" class="item -remedy"><img src="ui/remedy.png"></a>
+			<a href="https://dconf.org/2016/talks/lucarella.html" class="item -sociomantic"><img src="ui/sociomantic.png"></a>
+			<a href="http://tech.adroll.com/blog/data/2014/11/17/d-is-for-data-science.html" class="item -aroll"><img src="ui/aroll.png"></a>
+			<a href="https://dconf.org/2016/talks/zvibel.html" class="item -wekaio"><img src="ui/wekaio.png"></a>
+		</div>
+	</div></section>
+
+
+	<div class="PageFooter"></div>
+</body>
+</html>
