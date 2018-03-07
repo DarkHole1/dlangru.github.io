@@ -1,7 +1,7 @@
 .PageBody {
 	font-family: 'PT Sans', sans-serif;
 	line-height: 1.2;
-	font-size: 16px;
+	font-size: 14px;
 }
 @media screen and (max-width: 720px) {
 	.PageBody {
@@ -136,12 +136,12 @@
 	}
 	.NavMenu>.toggle {
 		display: block;
-		color: #fff;
-		padding: 0 1em;
+		width: 40px;
+		height: 40px;
+		margin: 5px 1em;
+		background: linear-gradient(to bottom, #fff 20%, transparent 20%, transparent 40%, #fff 40%, #fff 60%, transparent 60%, transparent 80%, #fff 80%);
 		text-decoration: none;
 		font-size: 200%;
-		line-height: 50px;
-		outline: none;
 	}
 }
 .NavMenu>ul>li>a,
