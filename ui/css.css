@@ -1,7 +1,7 @@
 .PageBody {
 	font-family: 'PT Sans', sans-serif;
 	line-height: 1.2;
-	font-size: 16px;
+	font-size: 14px;
 }
 @media screen and (max-width: 720px) {
 	.PageBody {
@@ -136,12 +136,12 @@
 	}
 	.NavMenu>.toggle {
 		display: block;
-		color: #fff;
-		padding: 0 1em;
+		width: 40px;
+		height: 40px;
+		margin: 5px 1em;
+		background: linear-gradient(to bottom, #fff 20%, transparent 20%, transparent 40%, #fff 40%, #fff 60%, transparent 60%, transparent 80%, #fff 80%);
 		text-decoration: none;
 		font-size: 200%;
-		line-height: 50px;
-		outline: none;
 	}
 }
 .NavMenu>ul>li>a,
@@ -228,43 +228,44 @@
 .ImagedList {
 	display: flex;
 	flex-wrap: wrap;
+	align-items: stretch;
 }
 .ImagedList>.item {
+	box-sizing: border-box;
+	flex: 1 1 33%;
+	padding: 0 1em 5em 1em;
 	display: flex;
-	width: 33%;
-	flex-wrap: wrap;
+	flex-direction: column;
 	justify-content: space-between;
-	align-items: flex-start;
-	margin: 4em 0;
-}
-.ImagedList>.item.-even {
-	flex-direction: row-reverse;
-}
-.ImagedList>.item>.logo {
-	flex: 1 1 200px;
-	text-align: center;
-	padding: 2em;
-}
-.ImagedList>.item>.logo>img {
-	width: 100%;
-	max-width: 240px;
-}
-@media screen and (max-width: 720px) {
-	.ImagedList>.item>.logo>img {
-		width: 100%;
-		max-width: 120px;
-	}
 }
 .ImagedList>.item>.description {
-	flex: 1 1 600px;
+	padding-bottom: 2em;
 }
-
-.ImagedList>.item>.description>.links {
-	margin-top: 1em;
+.ImagedList>.item>.description>.logo {
+	height: 240px;
+	text-align: center;
+	margin-bottom: 2em;
 }
-.ImagedList>.item>.description>.links>.PushButton {
+.ImagedList>.item>.description>.logo>img {
+	height: 100%;
+}
+.ImagedList>.item>.links {
+	text-align: center;
+}
+.ImagedList>.item>.links>.PushButton {
 	margin-right: 1em;
 }
+
+@media screen and (max-width: 720px) {
+	.ImagedList {
+		display: block;
+	}
+	.ImagedList>.item {
+		width: 100%;
+	}
+}
+
+
 
 
 /* LinkList */
