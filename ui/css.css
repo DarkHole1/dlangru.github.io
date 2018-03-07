@@ -228,43 +228,44 @@
 .ImagedList {
 	display: flex;
 	flex-wrap: wrap;
+	align-items: stretch;
 }
 .ImagedList>.item {
+	box-sizing: border-box;
+	flex: 1 1 33%;
+	padding: 0 1em 5em 1em;
 	display: flex;
-	width: 33%;
-	flex-wrap: wrap;
+	flex-direction: column;
 	justify-content: space-between;
-	align-items: flex-start;
-	margin: 4em 0;
-}
-.ImagedList>.item.-even {
-	flex-direction: row-reverse;
-}
-.ImagedList>.item>.logo {
-	flex: 1 1 200px;
-	text-align: center;
-	padding: 2em;
-}
-.ImagedList>.item>.logo>img {
-	width: 100%;
-	max-width: 240px;
-}
-@media screen and (max-width: 720px) {
-	.ImagedList>.item>.logo>img {
-		width: 100%;
-		max-width: 120px;
-	}
 }
 .ImagedList>.item>.description {
-	flex: 1 1 600px;
+	padding-bottom: 2em;
 }
-
-.ImagedList>.item>.description>.links {
-	margin-top: 1em;
+.ImagedList>.item>.description>.logo {
+	height: 240px;
+	text-align: center;
+	margin-bottom: 2em;
 }
-.ImagedList>.item>.description>.links>.PushButton {
+.ImagedList>.item>.description>.logo>img {
+	height: 100%;
+}
+.ImagedList>.item>.links {
+	text-align: center;
+}
+.ImagedList>.item>.links>.PushButton {
 	margin-right: 1em;
 }
+
+@media screen and (max-width: 720px) {
+	.ImagedList {
+		display: block;
+	}
+	.ImagedList>.item {
+		width: 100%;
+	}
+}
+
+
 
 
 /* LinkList */
